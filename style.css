@@ -19,7 +19,7 @@ body {
 }
 
 .site-header {
-  background-color: #0b162a; /* Bears navy */
+  background-color: #0b162a;
   color: #fff;
 }
 
@@ -48,15 +48,11 @@ body {
 }
 
 .main-nav a:hover {
-  color: #c83803; /* Bears orange */
+  color: #c83803;
 }
 
 .hero {
-  background: linear-gradient(
-    to right,
-    #0b162a,
-    #c83803
-  );
+  background: linear-gradient(to right, #0b162a, #c83803);
   color: #fff;
   padding: 4rem 0;
   text-align: center;
@@ -79,10 +75,43 @@ body {
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: #e5e7eb;
+}
+
+.featured-player {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+
+.player-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.player-text h3 {
+  color: #c83803;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.player-text h4 {
+  font-size: 1.8rem;
+  color: #0b162a;
+  margin: 0.5rem 0;
+}
+
+.player-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .content {
@@ -109,13 +138,56 @@ body {
   list-style: square inside;
 }
 
+.contact {
+  background-color: #f1f5f9;
+  padding: 3rem 0;
+}
+
+.contact h3,
+.contact p {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c83803;
+}
+
 .site-footer {
   background-color: #0b162a;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
 }
-
 
 @media (max-width: 900px) {
   .content {
@@ -138,11 +210,12 @@ body {
     align-items: center;
   }
 
-  .content {
-    grid-template-columns: 1fr;
+  .player-flex {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .hero {
-    padding: 3rem 1rem;
+  .content {
+    grid-template-columns: 1fr;
   }
 }
